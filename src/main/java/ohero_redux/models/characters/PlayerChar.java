@@ -1,4 +1,13 @@
 package ohero_redux.models.characters;
 
-public class PlayerChar {
+import ohero_redux.models.utilities.Inventory;
+
+public class PlayerChar extends Character {
+
+    private Inventory playerInventory;
+
+    public PlayerChar(String name) {
+        super(name);
+        this.playerInventory = new Inventory();
+    }
 }
