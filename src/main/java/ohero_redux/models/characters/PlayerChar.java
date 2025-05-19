@@ -10,4 +10,9 @@ public class PlayerChar extends Character {
         super(name);
         this.playerInventory = new Inventory();
     }
+
+    public Inventory getPlayerInventory() {
+        return playerInventory;
+    }
+
 }
