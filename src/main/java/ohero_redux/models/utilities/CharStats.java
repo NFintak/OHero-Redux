@@ -36,11 +36,15 @@ public class CharStats {
     }
 
     public Integer incrDex(Integer mod) {
-        return this.dexterity + mod;
+        return this.dexterity += mod;
     }
 
     public Integer decrDex(Integer mod) {
-        return this.dexterity - mod;
+        if (this.dexterity - mod < 0) {
+            return this.dexterity = 0;
+        } else {
+            return this.dexterity -= mod;
+        }
     }
 
     public Integer getEnergy() {
@@ -52,11 +56,15 @@ public class CharStats {
     }
 
     public Integer incrEnergy(Integer mod) {
-        return this.energy + mod;
+        return this.energy += mod;
     }
 
     public Integer decrEnergy(Integer mod) {
-        return this.energy - mod;
+        if (this.energy - mod < 0) {
+            return this.energy = 0;
+        } else {
+            return this.energy -= mod;
+        }
     }
 
     public Integer getStrength() {
@@ -68,11 +76,11 @@ public class CharStats {
     }
 
     public Integer incrStrength(Integer mod) {
-        return this.strength + mod;
+        return this.strength += mod;
     }
 
     public Integer decrStrength(Integer mod) {
-        return this.strength - mod;
+        return this.strength -= mod;
     }
 
     public Integer getIntellect() {
@@ -84,11 +92,11 @@ public class CharStats {
     }
 
     public Integer incrIntellect(Integer mod) {
-        return this.intellect + mod;
+        return this.intellect += mod;
     }
 
     public Integer decrIntellect(Integer mod) {
-        return this.intellect - mod;
+        return this.intellect -= mod;
     }
 
     public Integer getHealth() {
@@ -100,11 +108,11 @@ public class CharStats {
     }
 
     public Integer incrHealth(Integer mod) {
-        return this.health + mod;
+        return this.health += mod;
     }
 
     public Integer decrHealth(Integer mod) {
-        return this.health - mod;
+        return this.health -= mod;
     }
 
     public Integer getCharisma() {
@@ -116,11 +124,11 @@ public class CharStats {
     }
 
     public Integer incrCharisma(Integer mod) {
-        return this.charisma + mod;
+        return this.charisma += mod;
     }
 
     public Integer decrCharisma(Integer mod) {
-        return this.charisma - mod;
+        return this.charisma -= mod;
     }
 
 }
