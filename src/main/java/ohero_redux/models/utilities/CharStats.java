@@ -5,7 +5,8 @@ public class CharStats {
     private Integer energy;
     private Integer strength;
     private Integer intellect;
-    private Integer health;
+    private Integer tempHealth;
+    private Integer totalHealth;
     private Integer charisma;
 
     public CharStats(Integer dexterity, Integer energy, Integer strength,
@@ -14,7 +15,8 @@ public class CharStats {
         this.energy = energy;
         this.strength = strength;
         this.intellect = intellect;
-        this.health = health;
+        this.tempHealth = health;
+        this.totalHealth = health;
         this.charisma = charisma;
     }
 
@@ -23,7 +25,8 @@ public class CharStats {
         this.energy = 0;
         this.strength = 0;
         this.intellect = 0;
-        this.health = 0;
+        this.tempHealth = 0;
+        this.totalHealth = 0;
         this.charisma = 0;
     }
 
@@ -107,23 +110,43 @@ public class CharStats {
         }
     }
 
-    public Integer getHealth() {
-        return health;
+    public Integer getTempHealth() {
+        return tempHealth;
     }
 
-    public void setHealth(Integer health) {
-        this.health = health;
+    public void setTempHealth(Integer health) {
+        this.tempHealth = health;
     }
 
-    public void incrHealth(Integer mod) {
-        this.health += mod;
+    public void incrTempHealth(Integer mod) {
+        this.tempHealth += mod;
     }
 
-    public void decrHealth(Integer mod) {
-        if (this.health - mod < 0) {
-            this.health = 0;
+    public void decrTempHealth(Integer mod) {
+        if (this.tempHealth - mod < 0) {
+            this.tempHealth = 0;
         } else {
-            this.health -= mod;
+            this.tempHealth -= mod;
+        }
+    }
+
+    public Integer getTotalHealth() {
+        return totalHealth;
+    }
+
+    public void setTotalHealth(Integer health) {
+        this.totalHealth = health;
+    }
+
+    public void incrTotalHealth(Integer mod) {
+        this.totalHealth += mod;
+    }
+
+    public void decrTotalHealth(Integer mod) {
+        if (this.totalHealth - mod < 0) {
+            this.totalHealth = 0;
+        } else {
+            this.totalHealth -= mod;
         }
     }
 
@@ -145,6 +168,14 @@ public class CharStats {
         } else {
             this.charisma -= mod;
         }
+    }
+
+    public String statsSummary() {
+//        String summary = "Dexterity: " + this.getDexterity() + "\nEnergy: " + this.getEnergy()
+//                + "\nStrength: " + this.getStrength() + "\nIntellect: " + this.getIntellect()
+//                + "\nHealth: " + this.getTempHealth() + "/" ;
+//        return summary;
+        return null;
     }
 
 }

@@ -36,4 +36,8 @@ public abstract class Character {
         this.stats = stats;
     }
 
+    public String characterSummary() {
+        return null;
+    }
+
 }

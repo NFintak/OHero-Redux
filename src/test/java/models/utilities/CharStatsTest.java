@@ -32,7 +32,8 @@ public class CharStatsTest {
         assertEquals(10, testStats.getEnergy());
         assertEquals(10, testStats.getStrength());
         assertEquals(10, testStats.getIntellect());
-        assertEquals(10, testStats.getHealth());
+        assertEquals(10, testStats.getTempHealth());
+        assertEquals(10, testStats.getTotalHealth());
         assertEquals(10, testStats.getCharisma());
     }
 
@@ -101,19 +102,35 @@ public class CharStatsTest {
     }
 
     @Test
-    public void testHealthSetter() {
-        testStats2.setHealth(15);
+    public void testTempHealthSetter() {
+        testStats2.setTempHealth(15);
         Integer expected = 15;
-        assertEquals(expected, testStats2.getHealth());
+        assertEquals(expected, testStats2.getTempHealth());
     }
 
     @Test
-    public void testHealthIncrDecr() {
-        assertEquals(10, testStats.getHealth());
-        testStats.incrHealth(5);
-        assertEquals(15, testStats.getHealth());
-        testStats.decrHealth(3);
-        assertEquals(12, testStats.getHealth());
+    public void testTempHealthIncrDecr() {
+        assertEquals(10, testStats.getTempHealth());
+        testStats.incrTempHealth(5);
+        assertEquals(15, testStats.getTempHealth());
+        testStats.decrTempHealth(3);
+        assertEquals(12, testStats.getTempHealth());
+    }
+
+    @Test
+    public void testTotalHealthSetter() {
+        testStats2.setTotalHealth(15);
+        Integer expected = 15;
+        assertEquals(expected, testStats2.getTotalHealth());
+    }
+
+    @Test
+    public void testTotalHealthIncrDecr() {
+        assertEquals(10, testStats.getTotalHealth());
+        testStats.incrTotalHealth(5);
+        assertEquals(15, testStats.getTotalHealth());
+        testStats.decrTotalHealth(3);
+        assertEquals(12, testStats.getTotalHealth());
     }
 
     @Test
