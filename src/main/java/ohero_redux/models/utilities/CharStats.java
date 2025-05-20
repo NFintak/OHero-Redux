@@ -35,15 +35,15 @@ public class CharStats {
         this.dexterity = dexterity;
     }
 
-    public Integer incrDex(Integer mod) {
-        return this.dexterity += mod;
+    public void incrDex(Integer mod) {
+        this.dexterity += mod;
     }
 
-    public Integer decrDex(Integer mod) {
+    public void decrDex(Integer mod) {
         if (this.dexterity - mod < 0) {
-            return this.dexterity = 0;
+            this.dexterity = 0;
         } else {
-            return this.dexterity -= mod;
+            this.dexterity -= mod;
         }
     }
 
@@ -55,15 +55,15 @@ public class CharStats {
         this.energy = energy;
     }
 
-    public Integer incrEnergy(Integer mod) {
-        return this.energy += mod;
+    public void incrEnergy(Integer mod) {
+        this.energy += mod;
     }
 
-    public Integer decrEnergy(Integer mod) {
+    public void decrEnergy(Integer mod) {
         if (this.energy - mod < 0) {
-            return this.energy = 0;
+            this.energy = 0;
         } else {
-            return this.energy -= mod;
+            this.energy -= mod;
         }
     }
 
@@ -75,12 +75,16 @@ public class CharStats {
         this.strength = strength;
     }
 
-    public Integer incrStrength(Integer mod) {
-        return this.strength += mod;
+    public void incrStrength(Integer mod) {
+        this.strength += mod;
     }
 
-    public Integer decrStrength(Integer mod) {
-        return this.strength -= mod;
+    public void decrStrength(Integer mod) {
+        if (this.strength - mod < 0) {
+            this.strength = 0;
+        } else {
+            this.strength -= mod;
+        }
     }
 
     public Integer getIntellect() {
@@ -91,12 +95,16 @@ public class CharStats {
         this.intellect = intellect;
     }
 
-    public Integer incrIntellect(Integer mod) {
-        return this.intellect += mod;
+    public void incrIntellect(Integer mod) {
+        this.intellect += mod;
     }
 
-    public Integer decrIntellect(Integer mod) {
-        return this.intellect -= mod;
+    public void decrIntellect(Integer mod) {
+        if (this.intellect - mod < 0) {
+            this.intellect = 0;
+        } else {
+            this.intellect -= mod;
+        }
     }
 
     public Integer getHealth() {
@@ -107,12 +115,16 @@ public class CharStats {
         this.health = health;
     }
 
-    public Integer incrHealth(Integer mod) {
-        return this.health += mod;
+    public void incrHealth(Integer mod) {
+        this.health += mod;
     }
 
-    public Integer decrHealth(Integer mod) {
-        return this.health -= mod;
+    public void decrHealth(Integer mod) {
+        if (this.health - mod < 0) {
+            this.health = 0;
+        } else {
+            this.health -= mod;
+        }
     }
 
     public Integer getCharisma() {
@@ -123,12 +135,16 @@ public class CharStats {
         this.charisma = charisma;
     }
 
-    public Integer incrCharisma(Integer mod) {
-        return this.charisma += mod;
+    public void incrCharisma(Integer mod) {
+        this.charisma += mod;
     }
 
-    public Integer decrCharisma(Integer mod) {
-        return this.charisma -= mod;
+    public void decrCharisma(Integer mod) {
+        if (this.charisma - mod < 0) {
+            this.charisma = 0;
+        } else {
+            this.charisma -= mod;
+        }
     }
 
 }
