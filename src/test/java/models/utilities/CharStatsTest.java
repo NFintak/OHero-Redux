@@ -156,4 +156,18 @@ public class CharStatsTest {
         assertEquals(0, testStats.getDexterity());
     }
 
+    @Test
+    public void testStatsSummary() {
+        String expected = "Dexterity: 10\nEnergy: 10\nStrength: 10\nIntellect: 10\nHealth: 10/10\nCharisma: 10";
+        String actual = testStats.statsSummary();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testStatsSummary2() {
+        String expected = "Dexterity: 0\nEnergy: 0\nStrength: 0\nIntellect: 0\nHealth: 0/0\nCharisma: 0";
+        String actual = testStats2.statsSummary();
+        assertEquals(expected, actual);
+    }
+
 }

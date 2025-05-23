@@ -171,11 +171,12 @@ public class CharStats {
     }
 
     public String statsSummary() {
-//        String summary = "Dexterity: " + this.getDexterity() + "\nEnergy: " + this.getEnergy()
-//                + "\nStrength: " + this.getStrength() + "\nIntellect: " + this.getIntellect()
-//                + "\nHealth: " + this.getTempHealth() + "/" ;
-//        return summary;
-        return null;
+        String summary = "Dexterity: " + this.getDexterity() + "\nEnergy: " + this.getEnergy()
+                + "\nStrength: " + this.getStrength() + "\nIntellect: " + this.getIntellect()
+                + "\nHealth: " + this.getTempHealth() + "/" + this.getTotalHealth()
+                + "\nCharisma: " + this.getCharisma();
+        return summary;
+        //return null;
     }
 
 }
