@@ -176,7 +176,6 @@ public class CharStats {
                 + "\nHealth: " + this.getTempHealth() + "/" + this.getTotalHealth()
                 + "\nCharisma: " + this.getCharisma();
         return summary;
-        //return null;
     }
 
 }

@@ -37,7 +37,7 @@ public abstract class Character {
     }
 
     public String characterSummary() {
-        return null;
+        return this.stats.statsSummary();
     }
 
 }
