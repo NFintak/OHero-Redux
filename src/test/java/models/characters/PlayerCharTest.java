@@ -68,4 +68,6 @@ public class PlayerCharTest {
         assertEquals(expected, actual);
     }
 
+    //add tests for inventory
+
 }
