@@ -9,6 +9,7 @@ public abstract class Character {
 
     public Character(String name) {
         this.name = name;
+        this.id = 0L;
         this.stats = new CharStats();
     }
 
@@ -20,7 +21,7 @@ public abstract class Character {
         this.id = id;
     }
 
-    public String getname() {
+    public String getName() {
         return name;
     }
 
@@ -37,7 +38,7 @@ public abstract class Character {
     }
 
     public String characterSummary() {
-        return this.stats.statsSummary();
+        return this.getName() + "\n" + this.stats.statsSummary();
     }
 
 }
