@@ -5,9 +5,19 @@ public abstract class Item {
     private String name;
     private String description;
 
+    public Item() {
+        this.name = "";
+        this.description = "";
+    }
+
     public Item(String name) {
         this.name = name;
         this.description = "";
+    }
+
+    public Item(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     public String getName() {
