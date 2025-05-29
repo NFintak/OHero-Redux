@@ -29,16 +29,7 @@ public class Supplies extends Item {
     }
 
     public Supplies(String name, String description, Integer quantity) {
-        super(name, description);
-        this.quantity = quantity;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+        super(name, description, quantity);
     }
 
 }

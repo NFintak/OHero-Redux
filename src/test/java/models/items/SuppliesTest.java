@@ -76,4 +76,11 @@ public class SuppliesTest {
         assertEquals(expected, test.getQuantity());
     }
 
+    @Test
+    public void testGetSummary() {
+        Supplies test = new Supplies("Rations", "Daily food rations", 14);
+        String expected = "Rations: Daily food rations, (14)";
+        assertEquals(expected, test.itemSummary());
+    }
+
 }

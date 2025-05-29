@@ -4,20 +4,30 @@ public abstract class Item {
 
     private String name;
     private String description;
+    private Integer quantity;
 
     public Item() {
         this.name = "";
         this.description = "";
+        this.quantity = 0;
     }
 
     public Item(String name) {
         this.name = name;
         this.description = "";
+        this.quantity = 0;
     }
 
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
+        this.quantity = 0;
+    }
+
+    public Item(String name, String description, Integer quantity) {
+        this.name = name;
+        this.description = description;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -36,8 +46,16 @@ public abstract class Item {
         this.description = description;
     }
 
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
     public String itemSummary() {
-        return this.getName() + "\n" + this.getDescription();
+        return String.format("%s: %s, (%s)", this.getName(), this.getDescription(), this.getQuantity());
     }
 
 }
