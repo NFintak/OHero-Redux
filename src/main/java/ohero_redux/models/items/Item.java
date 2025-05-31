@@ -27,6 +27,17 @@ public class Item extends ohero_redux.models.utilities.Item {
 
     //add additional constructors?
 
+    public ItemStats getItemStats() {
+        return stats;
+    }
+
+    public void setItemStats(ItemStats stats) {
+        this.stats = stats;
+    }
+
     //add override for itemSummary, include item stats
+    public String itemSummary() {
+        return String.format("%s: %s, (%s)\n%s", this.getName(), this.getDescription(), this.getQuantity(), this.getItemStats().getStatSummary());
+    }
 
 }

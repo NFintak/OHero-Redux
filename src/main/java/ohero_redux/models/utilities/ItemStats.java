@@ -76,4 +76,9 @@ public class ItemStats {
         this.charismaMod = mod;
     }
 
+    public String getStatSummary() {
+        return String.format("Dexterity: %s\nEnergy: %s\nStrength: %s\nIntellect: %s\nHealth: %s\nCharisma: %s"
+                , this.getDexMod(), this.getEnergyMod(), this.getStrengthMod(), this.getIntellectMod(), this.getTotalHealthMod(), this.getCharismaMod());
+    }
+
 }
