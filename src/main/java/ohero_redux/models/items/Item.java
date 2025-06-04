@@ -25,7 +25,21 @@ public class Item extends ohero_redux.models.utilities.Item {
         this.stats = new ItemStats();
     }
 
-    //add additional constructors?
+    public Item(String name, String description) {
+        super(name, description);
+        this.quantity = 0;
+        this.stats = new ItemStats();
+    }
+
+    public Item(String name, String description, Integer quantity) {
+        super(name, description, quantity);
+        this.stats = new ItemStats();
+    }
+
+    public Item(String name, String description, Integer quantity, ItemStats stats) {
+        super(name, description, quantity);
+        this.stats = stats;
+    }
 
     public ItemStats getItemStats() {
         return stats;
