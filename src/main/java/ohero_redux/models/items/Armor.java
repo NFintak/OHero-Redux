@@ -6,11 +6,26 @@ import ohero_redux.models.utilities.ItemStats;
 
 public class Armor extends Item {
 
+    private String name;
+    private String description;
     private ItemStats stats;
 
     public Armor(String name) {
         super(name);
+        this.description = "";
         this.stats = new ItemStats();
+    }
+
+    public ItemStats getItemStats() {
+        return stats;
+    }
+
+    public void setItemStats(ItemStats stats) {
+        this.stats = stats;
+    }
+
+    public String itemSummary() {
+        return String.format("%s: %s, (%s)\n%s", this.getName(), this.getDescription(), this.getQuantity(), this.getItemStats().getStatSummary());
     }
 
 }
