@@ -16,6 +16,16 @@ public class Armor extends Item {
         this.stats = new ItemStats();
     }
 
+    public Armor(String name, String description) {
+        super(name, description);
+        this.stats = new ItemStats();
+    }
+
+    public Armor(String name, String description, ItemStats stats) {
+        super(name, description);
+        this.stats = stats;
+    }
+
     public ItemStats getItemStats() {
         return stats;
     }
