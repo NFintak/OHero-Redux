@@ -66,4 +66,6 @@ public class ItemTest {
         assertEquals(stats, item.getItemStats());
     }
 
+    //add test for item summary?
+
 }
