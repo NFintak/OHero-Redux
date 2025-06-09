@@ -10,7 +10,7 @@ public class SuppliesTest {
     public void testSuppliesNullConstruct() {
         Supplies test = new Supplies();
         String expected = "";
-        Integer expectedNum = 0;
+        Integer expectedNum = 1;
         assertEquals(expected, test.getName());
         assertEquals(expected, test.getDescription());
         assertEquals(expectedNum, test.getQuantity());
@@ -21,7 +21,7 @@ public class SuppliesTest {
         Supplies test = new Supplies("Adventurer's Pack");
         String expectedName = "Adventurer's Pack";
         String expectedDesc = "";
-        Integer expectedNum = 0;
+        Integer expectedNum = 1;
         assertEquals(expectedName, test.getName());
         assertEquals(expectedDesc, test.getDescription());
         assertEquals(expectedNum, test.getQuantity());
@@ -32,7 +32,7 @@ public class SuppliesTest {
         Supplies test = new Supplies("Adventurer's Pack", "Large backpack, can contain 30 lbs of items");
         String expectedName = "Adventurer's Pack";
         String expectedDesc = "Large backpack, can contain 30 lbs of items";
-        Integer expectedNum = 0;
+        Integer expectedNum = 1;
         assertEquals(expectedName, test.getName());
         assertEquals(expectedDesc, test.getDescription());
         assertEquals(expectedNum, test.getQuantity());
@@ -70,7 +70,7 @@ public class SuppliesTest {
     @Test
     public void testGetSetQuantity() {
         Supplies test = new Supplies("Rations", "Daily food rations");
-        assertEquals(0, test.getQuantity());
+        assertEquals(1, test.getQuantity());
         Integer expected = 14;
         test.setQuantity(expected);
         assertEquals(expected, test.getQuantity());

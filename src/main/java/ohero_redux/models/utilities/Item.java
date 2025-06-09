@@ -9,19 +9,19 @@ public abstract class Item {
     public Item() {
         this.name = "";
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public Item(String name) {
         this.name = name;
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public Item(String name, String description, Integer quantity) {

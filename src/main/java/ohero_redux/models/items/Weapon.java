@@ -14,14 +14,20 @@ public class Weapon extends Item {
     public Weapon() {
         this.name = "";
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 
     public Weapon(String name) {
         super(name);
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
+        this.stats = new ItemStats();
+    }
+
+    public Weapon(String name, String description) {
+        super(name, description);
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 

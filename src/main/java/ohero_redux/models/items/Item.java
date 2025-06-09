@@ -14,20 +14,20 @@ public class Item extends ohero_redux.models.utilities.Item {
     public Item() {
         this.name = "";
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 
     public Item(String name) {
         super(name);
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 
     public Item(String name, String description) {
         super(name, description);
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 

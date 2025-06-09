@@ -27,7 +27,7 @@ public class ItemTest {
 
     @Test
     public void test3NonNullItemConstructor() {
-        Item item = new Item("Strength Potion", "Potion; Increases strength", 1, new ItemStats(0, 0, 2, 0, 0, 0));
+        Item item = new Item("Strength Potion", "Potion; Increases strength", 2, new ItemStats(0, 0, 2, 0, 0, 0));
         assertNotNull(item);
     }
 
@@ -52,7 +52,7 @@ public class ItemTest {
     @Test
     public void testGetSetQuantity() {
         Item item = new Item();
-        assertEquals(0, item.getQuantity());
+        assertEquals(1, item.getQuantity());
         item.setQuantity(5);
         assertEquals(5, item.getQuantity());
     }

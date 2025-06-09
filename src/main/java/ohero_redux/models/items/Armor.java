@@ -14,20 +14,20 @@ public class Armor extends Item {
     public Armor() {
         this.name = "";
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 
     public Armor(String name) {
         super(name);
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 
     public Armor(String name, String description) {
         super(name, description);
-        this.quantity = 0;
+        this.quantity = 1;
         this.stats = new ItemStats();
     }
 

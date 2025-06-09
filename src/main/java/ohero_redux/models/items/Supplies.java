@@ -13,19 +13,19 @@ public class Supplies extends Item {
     public Supplies() {
         this.name = "";
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
 
     }
 
     public Supplies(String name) {
         super(name);
         this.description = "";
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public Supplies(String name, String description) {
         super(name, description);
-        this.quantity = 0;
+        this.quantity = 1;
     }
 
     public Supplies(String name, String description, Integer quantity) {
