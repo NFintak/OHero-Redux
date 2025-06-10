@@ -31,4 +31,25 @@ public class Weapon extends Item {
         this.stats = new ItemStats();
     }
 
+    public Weapon(String name, String description, Integer quantity) {
+        super(name, description, quantity);
+        this.stats = new ItemStats();
+    }
+
+    public Weapon(String name, String description, Integer quantity, ItemStats stats) {
+        super(name, description, quantity);
+        this.stats = stats;
+    }
+
+    public ItemStats getItemStats() {
+        return stats;
+    }
+
+    public void setItemStats(ItemStats stats) {
+        this.stats = stats;
+    }
+
+    public String itemSummary() {
+        return String.format("%s: %s, (%s)\n%s", this.getName(), this.getDescription(), this.getQuantity(), this.getItemStats().getStatSummary());
+    }
 }
