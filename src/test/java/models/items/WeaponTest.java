@@ -1,5 +1,6 @@
 package models.items;
 
+import ohero_redux.models.utilities.Item;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ohero_redux.models.items.Weapon;
@@ -75,6 +76,12 @@ public class WeaponTest {
         Weapon arrows = new Weapon("Quiver of arrows", "Holds up to 30 arrows at a time; no stat changes", 25, new ItemStats());
         String expected = "Quiver of arrows: Holds up to 30 arrows at a time; no stat changes, (25)\nDexterity: 0\nEnergy: 0\nStrength: 0\nIntellect: 0\nHealth: 0\nCharisma: 0";
         assertEquals(expected, arrows.itemSummary());
+    }
+
+    @Test
+    public void testInstanceOfItem() {
+        Weapon dagger = new Weapon();
+        assertInstanceOf(Item.class, dagger);
     }
 
 }

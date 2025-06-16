@@ -1,5 +1,6 @@
 package models.items;
 
+import ohero_redux.models.utilities.Item;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ohero_redux.models.items.Armor;
@@ -68,6 +69,12 @@ public class ArmorTest {
     public void testGetItemSummary() {
         Armor boots = new Armor("Combat boots", "Worn leather boots; +2 dexterity mod, +2 health mod", 1, new ItemStats(2, 0, 0, 0, 2, 0));
         String expected = "Combat boots: Worn leather boots; +2 dexterity mod, +2 health mod, (1)\nDexterity: 2\nEnergy: 0\nStrength: 0\nIntellect: 0\nHealth: 2\nCharisma: 0";
+    }
+
+    @Test
+    public void testInstanceOfItem() {
+        Armor armor = new Armor();
+        assertInstanceOf(Item.class, armor);
     }
 
 }

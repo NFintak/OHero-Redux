@@ -1,5 +1,6 @@
 package models.items;
 
+import ohero_redux.models.utilities.Item;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ohero_redux.models.items.Supplies;
@@ -81,6 +82,12 @@ public class SuppliesTest {
         Supplies test = new Supplies("Rations", "Daily food rations", 14);
         String expected = "Rations: Daily food rations, (14)";
         assertEquals(expected, test.itemSummary());
+    }
+
+    @Test
+    public void testInstanceOfItem() {
+        Supplies supplies = new Supplies();
+        assertInstanceOf(Item.class, supplies);
     }
 
 }
