@@ -10,16 +10,28 @@ public class Inventory {
         playerInventory = new ArrayList<Item>();
     }
 
-    public ArrayList<Item> getPlayerInventory() {
+    public Inventory(ArrayList<Item> inventory) {
+        playerInventory = inventory;
+    }
+
+    public ArrayList<Item> getInventory() {
         return playerInventory;
     }
 
-    public void setPlayerInventory(ArrayList<Item> playerInventory) {
+    public void setInventory(ArrayList<Item> playerInventory) {
         this.playerInventory = playerInventory;
     }
 
-    public void addToInventory(Item item) {
+    public void addItem(Item item) {
         this.playerInventory.add(item);
+    }
+
+    public Boolean checkIfEmpty() {
+        return this.playerInventory.isEmpty();
+    }
+
+    public Integer inventorySize() {
+        return this.playerInventory.size();
     }
 
 }
