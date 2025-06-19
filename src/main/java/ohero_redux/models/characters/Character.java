@@ -7,10 +7,28 @@ public abstract class Character {
     private String name;
     private CharStats stats;
 
+    public Character() {
+        this.name = "";
+        this.id = 0L;
+        this.stats = new CharStats();
+    }
+
     public Character(String name) {
         this.name = name;
         this.id = 0L;
         this.stats = new CharStats();
+    }
+
+    public Character(String name, Long id) {
+        this.name = name;
+        this.id = id;
+        this.stats = new CharStats();
+    }
+
+    public Character(String name, Long id, CharStats stats) {
+        this.name = name;
+        this.id = id;
+        this.stats = stats;
     }
 
     public Long getId() {
