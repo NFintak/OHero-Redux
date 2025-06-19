@@ -10,8 +10,20 @@ public class PlayerCharTest {
     PlayerChar testPlayer = new PlayerChar("test");
 
     @Test
-    public void testPlayerConstructor() {
+    public void testNullPlayerConstructor() {
+        PlayerChar player1 = new PlayerChar();
+        assertNotNull(player1);
+    }
+
+    @Test
+    public void testPlayerConstructor1() {
         PlayerChar player1 = new PlayerChar("player1");
+        assertNotNull(player1);
+    }
+
+    @Test
+    public void testPlayerConstructor2() {
+        PlayerChar player1 = new PlayerChar("test", 123L);
         assertNotNull(player1);
     }
 

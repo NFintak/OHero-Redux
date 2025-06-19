@@ -24,6 +24,12 @@ public class PlayerChar extends Character {
         this.playerInventory = new Inventory();
     }
 
+    public PlayerChar(String name, Long id) {
+        super(name, id);
+        this.stats = new CharStats();
+        this.playerInventory = new Inventory();
+    }
+
     public Inventory getPlayerInventory() {
         return playerInventory;
     }
