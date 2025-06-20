@@ -2,12 +2,16 @@ package models.characters;
 
 import ohero_redux.models.characters.PlayerChar;
 import ohero_redux.models.utilities.CharStats;
+import ohero_redux.models.utilities.Inventory;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import ohero_redux.models.items.Items;
 
 public class PlayerCharTest {
 
     PlayerChar testPlayer = new PlayerChar("test");
+    Items item1 = new Items();
+    Items item2 = new Items();
 
     @Test
     public void testNullPlayerConstructor() {
@@ -80,6 +84,17 @@ public class PlayerCharTest {
         assertEquals(expected, actual);
     }
 
-    //add tests for inventory
+    @Test
+    public void testCharInventory() {
+        assertNotNull(testPlayer.getPlayerInventory());
+    }
+
+    @Test
+    public void testAddToPlayerInventory() {
+        testPlayer.getPlayerInventory().addItem(item1);
+        testPlayer.getPlayerInventory().addItem(item2);
+        Inventory testInventory = testPlayer.getPlayerInventory();
+        assertEquals(testInventory, testPlayer.getPlayerInventory());
+    }
 
 }
