@@ -3,7 +3,7 @@ package ohero_redux.models.characters;
 import ohero_redux.models.utilities.Inventory;
 import ohero_redux.models.utilities.CharStats;
 
-public class PlayerChar extends Character {
+public class PlayerChar extends Characters {
 
     private String name;
     private Long id;

@@ -1,6 +1,6 @@
 package ohero_redux.models.characters;
 
-public class NonPlayerChar extends Character {
+public class NonPlayerChar extends Characters {
 
     private String type;
 

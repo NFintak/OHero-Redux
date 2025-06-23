@@ -1,6 +1,6 @@
 package ohero_redux.output;
 
-import ohero_redux.models.characters.Character;
+import ohero_redux.models.characters.Characters;
 
 public class Display {
 
@@ -9,7 +9,7 @@ public class Display {
         return text;
     }
 
-    public String printStats(Character character) {
+    public String printStats(Characters character) {
         //return and print character name and stats
         return null;
     }

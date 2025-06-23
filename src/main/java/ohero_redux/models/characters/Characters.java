@@ -2,35 +2,35 @@ package ohero_redux.models.characters;
 
 import ohero_redux.models.utilities.CharStats;
 
-public abstract class Character {
+public abstract class Characters {
     private Long id;
     private String name;
     private CharStats stats;
 
-    public Character() {
+    public Characters() {
         this.name = "";
         this.id = 0L;
         this.stats = new CharStats();
     }
 
-    public Character(String name) {
+    public Characters(String name) {
         this.name = name;
         this.id = 0L;
         this.stats = new CharStats();
     }
 
-    public Character(String name, Long id) {
+    public Characters(String name, Long id) {
         this.name = name;
         this.id = id;
         this.stats = new CharStats();
     }
 
-    public Character(String name, CharStats stats) {
+    public Characters(String name, CharStats stats) {
         this.name = name;
         this.stats = stats;
     }
 
-    public Character(String name, Long id, CharStats stats) {
+    public Characters(String name, Long id, CharStats stats) {
         this.name = name;
         this.id = id;
         this.stats = stats;
