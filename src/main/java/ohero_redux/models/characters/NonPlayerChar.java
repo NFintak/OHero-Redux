@@ -9,12 +9,12 @@ public class NonPlayerChar extends Characters {
         this.type = type;
     }
 
-    public String getNPCType() {
-        return type;
-    }
-
-    public void setNPCType(String type) {
-        this.type = type;
-    }
+//    public String getNPCType() {
+//        return type;
+//    }
+//
+//    public void setNPCType(String type) {
+//        this.type = type;
+//    }
 
 }

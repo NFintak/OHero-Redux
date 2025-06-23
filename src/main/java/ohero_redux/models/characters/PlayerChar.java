@@ -2,8 +2,9 @@ package ohero_redux.models.characters;
 
 import ohero_redux.models.utilities.Inventory;
 import ohero_redux.models.utilities.CharStats;
+import ohero_redux.interfaces.HealthCheck;
 
-public class PlayerChar extends Characters {
+public class PlayerChar extends Characters implements HealthCheck{
 
     private String name;
     private Long id;

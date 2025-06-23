@@ -1,4 +1,6 @@
 package ohero_redux.models.characters;
 
-public class Boss extends Enemy {
+import ohero_redux.interfaces.HealthCheck;
+
+public class Boss extends Enemy implements HealthCheck {
 }

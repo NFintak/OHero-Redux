@@ -1,4 +1,6 @@
 package ohero_redux.models.characters;
 
-public class Melee extends Enemy {
+import ohero_redux.interfaces.HealthCheck;
+
+public class Melee extends Enemy implements HealthCheck {
 }
