@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ohero_redux.models.characters.Enemy;
 import ohero_redux.models.utilities.CharStats;
-import ohero_redux.models.utilities.Inventory;
+import ohero_redux.models.utilities.Inventory; //might be able to leave out, tbd
 import ohero_redux.models.items.Items;
 
 public class EnemyTest {
@@ -37,5 +37,41 @@ public class EnemyTest {
     public void testNotNullConstructor4() {
         Enemy troll = new Enemy("Blinky", 123L, new CharStats(), "Mid-sized");
         assertNotNull(troll);
+    }
+
+    @Test
+    public void testNameGetterSetter() {
+        Enemy troll = new Enemy();
+        String expected = "Blinky";
+        assertEquals("", troll.getName());
+        troll.setName(expected);
+        assertEquals(expected, troll.getName());
+    }
+
+    @Test
+    public void testIdGetterSetter() {
+        Enemy troll = new Enemy();
+        Long expected = 123L;
+        assertEquals(0L, troll.getId());
+        troll.setId(expected);
+        assertEquals(expected, troll.getId());
+    }
+
+    @Test
+    public void testStatsGetterSetter() {
+        Enemy troll = new Enemy("Blinky", 123L, new CharStats(0, 0, 0, 0, 0, 0));
+        assertNotNull(troll.getStats());
+        CharStats testStats = new CharStats(10, 10, 10, 10, 10, 10);
+        troll.setStats(testStats);
+        assertEquals(testStats, troll.getStats());
+    }
+
+    @Test
+    public void testTypeGetterSetter() {
+        Enemy troll = new Enemy();
+        assertEquals("", troll.getEnemyType());
+        String expected = "Mid-sized";
+        troll.setEnemyType(expected);
+        assertEquals(expected, troll.getEnemyType());
     }
 }
