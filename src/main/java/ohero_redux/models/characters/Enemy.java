@@ -1,8 +1,9 @@
 package ohero_redux.models.characters;
 
 import ohero_redux.models.utilities.CharStats;
+import ohero_redux.interfaces.HealthCheck;
 
-public abstract class Enemy extends Characters {
+public abstract class Enemy extends Characters implements HealthCheck{
     //make abstract and split into 2-3 types of enemies?
     //brute, melee, boss?
 
@@ -25,6 +26,10 @@ public abstract class Enemy extends Characters {
 
     public String getEnemyType() {
         return this.getClass().toString();
+    }
+
+    public String getHealthStatus() {
+        return String.format("%s/%s", this.getStats().getTempHealth(), this.getStats().getTotalHealth());
     }
 
 }

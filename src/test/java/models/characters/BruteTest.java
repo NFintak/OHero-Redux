@@ -61,6 +61,14 @@ public class BruteTest {
     }
 
     @Test
+    public void testHealthCheck() {
+        Brute troll = new Brute();
+        assertEquals("0/0", troll.getHealthStatus());
+        troll.getStats().setTempHealth(20);
+        assertEquals("20/20", troll.getHealthStatus());
+    }
+
+    @Test
     public void testInstanceOfEnemy() {
         Brute troll = new Brute();
         assertInstanceOf(Enemy.class, troll);

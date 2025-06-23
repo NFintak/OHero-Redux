@@ -115,7 +115,12 @@ public class CharStats {
     }
 
     public void setTempHealth(Integer health) {
-        this.tempHealth = health;
+        if (health > this.totalHealth) {
+            this.tempHealth = health;
+            this.totalHealth = health;
+        } else {
+            this.tempHealth = health;
+        }
     }
 
     public void incrTempHealth(Integer mod) {

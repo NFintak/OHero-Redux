@@ -4,7 +4,7 @@ import ohero_redux.models.utilities.Inventory;
 import ohero_redux.models.utilities.CharStats;
 import ohero_redux.interfaces.HealthCheck;
 
-public class PlayerChar extends Characters implements HealthCheck{
+public class PlayerChar extends Characters implements HealthCheck {
 
     private String name;
     private Long id;
@@ -33,6 +33,10 @@ public class PlayerChar extends Characters implements HealthCheck{
 
     public Inventory getPlayerInventory() {
         return playerInventory;
+    }
+
+    public String getHealthStatus() {
+        return String.format("%s/%s", this.getStats().getTempHealth(), this.getStats().getTotalHealth());
     }
 
 }
