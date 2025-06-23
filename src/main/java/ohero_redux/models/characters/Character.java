@@ -25,6 +25,11 @@ public abstract class Character {
         this.stats = new CharStats();
     }
 
+    public Character(String name, CharStats stats) {
+        this.name = name;
+        this.stats = stats;
+    }
+
     public Character(String name, Long id, CharStats stats) {
         this.name = name;
         this.id = id;

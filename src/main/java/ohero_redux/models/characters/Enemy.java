@@ -3,39 +3,32 @@ package ohero_redux.models.characters;
 import ohero_redux.models.utilities.CharStats;
 
 public class Enemy extends Character {
+    //make abstract and split into 2-3 types of enemies?
+    //brute, melee, boss?
 
     private String name;
-    private Long id;
     private CharStats stats;
     private String type;
 
     public Enemy() {
         this.name = "";
-        this.id = 0L;
         this.stats = new CharStats();
         this.type = "";
     }
 
     public Enemy(String name) {
         super(name);
-        this.id = 0L;
         this.stats = new CharStats();
         this.type = "";
     }
 
-    public Enemy(String name, Long id) {
-        super(name, id);
-        this.stats = new CharStats();
+    public Enemy(String name, CharStats stats) {
+        super(name, stats);
         this.type = "";
     }
 
-    public Enemy(String name, Long id, CharStats stats) {
-        super(name, id, stats);
-        this.type = "";
-    }
-
-    public Enemy(String name, Long id, CharStats stats, String enemyType) {
-        super(name, id);
+    public Enemy(String name, CharStats stats, String enemyType) {
+        super(name, stats);
         this.type = enemyType;
     }
 

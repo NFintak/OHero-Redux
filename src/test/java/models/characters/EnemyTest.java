@@ -23,19 +23,13 @@ public class EnemyTest {
 
     @Test
     public void testNonNullConstructor2() {
-        Enemy troll = new Enemy("Blinky", 123L);
+        Enemy troll = new Enemy("Blinky", new CharStats());
         assertNotNull(troll);
     }
 
     @Test
     public void testNonNullConstructor3() {
-        Enemy troll = new Enemy("Blinky", 123L, new CharStats());
-        assertNotNull(troll);
-    }
-
-    @Test
-    public void testNotNullConstructor4() {
-        Enemy troll = new Enemy("Blinky", 123L, new CharStats(), "Mid-sized");
+        Enemy troll = new Enemy("Blinky", new CharStats(), "Mid-sized");
         assertNotNull(troll);
     }
 
@@ -49,17 +43,8 @@ public class EnemyTest {
     }
 
     @Test
-    public void testIdGetterSetter() {
-        Enemy troll = new Enemy();
-        Long expected = 123L;
-        assertEquals(0L, troll.getId());
-        troll.setId(expected);
-        assertEquals(expected, troll.getId());
-    }
-
-    @Test
     public void testStatsGetterSetter() {
-        Enemy troll = new Enemy("Blinky", 123L, new CharStats(0, 0, 0, 0, 0, 0));
+        Enemy troll = new Enemy("Blinky", new CharStats(0, 0, 0, 0, 0, 0));
         assertNotNull(troll.getStats());
         CharStats testStats = new CharStats(10, 10, 10, 10, 10, 10);
         troll.setStats(testStats);
