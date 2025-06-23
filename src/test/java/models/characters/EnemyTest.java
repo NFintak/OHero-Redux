@@ -30,5 +30,12 @@ public class EnemyTest {
     @Test
     public void testNonNullConstructor3() {
         Enemy troll = new Enemy("Blinky", 123L, new CharStats());
+        assertNotNull(troll);
+    }
+
+    @Test
+    public void testNotNullConstructor4() {
+        Enemy troll = new Enemy("Blinky", 123L, new CharStats(), "Mid-sized");
+        assertNotNull(troll);
     }
 }

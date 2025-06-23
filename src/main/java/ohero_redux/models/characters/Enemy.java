@@ -34,7 +34,7 @@ public class Enemy extends Character {
         this.type = "";
     }
 
-    public Enemy(String name, Long id, String enemyType) {
+    public Enemy(String name, Long id, CharStats stats, String enemyType) {
         super(name, id);
         this.type = enemyType;
     }
