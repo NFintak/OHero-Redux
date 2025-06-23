@@ -24,6 +24,38 @@ public class Melee extends Enemy {
         this.meleeInventory = new Inventory();
     }
 
+    public Melee(String name, CharStats stats) {
+        super(name, stats);
+        this.description = "";
+        this.meleeInventory = new Inventory();
+    }
 
+    public Melee(String name, CharStats stats, String description) {
+        super(name, stats);
+        this.description = description;
+        this.meleeInventory = new Inventory();
+    }
+
+    public Melee(String name, CharStats stats, String description, Inventory inventory) {
+        super(name, stats);
+        this.description = description;
+        this.meleeInventory = inventory;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String desc) {
+        this.description = desc;
+    }
+
+    public Inventory getInventory() {
+        return meleeInventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.meleeInventory = inventory;
+    }
 
 }
