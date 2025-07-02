@@ -28,4 +28,32 @@ public class Boss extends Enemy {
         this.loot = new Items();
     }
 
+    public Boss(String name, CharStats stats) {
+        super(name, stats);
+        this.description = "";
+        this.inventory = new Inventory();
+        this.loot = new Items();
+    }
+
+    public Boss(String name, CharStats stats, String description) {
+        super(name, stats);
+        this.description = description;
+        this.inventory = new Inventory();
+        this.loot = new Items();
+    }
+
+    public Boss(String name, CharStats stats, String description, Inventory inventory) {
+        super(name, stats);
+        this.description = description;
+        this.inventory = inventory;
+        this.loot = new Items();
+    }
+
+    public Boss(String name, CharStats stats, String description, Inventory inventory, Items loot) {
+        super(name, stats);
+        this.description = description;
+        this.inventory = inventory;
+        this.loot = loot;
+    }
+
 }
