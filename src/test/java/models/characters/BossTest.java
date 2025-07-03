@@ -25,29 +25,29 @@ public class BossTest {
         assertNotNull(test);
     }
 
-//    @Test
-//    public void testNonNullConstruct2() {
-//        Boss test = new Boss("Lich", new CharStats());
-//        assertNotNull(test);
-//    }
-//
-//    @Test
-//    public void testNonNullConstruct3() {
-//        Boss test = new Boss("Lich", new CharStats(), "A skeletal figure, commanding legions of undead");
-//        assertNotNull(test);
-//    }
-//
-//    @Test
-//    public void testNonNullConstruct4() {
-//        Boss test = new Boss("Lich", new CharStats(), "", new Inventory());
-//        assertNotNull(test);
-//    }
-//
-//    @Test
-//    public void testNonNullConstruct5() {
-//        Boss test = new Boss("Lich", new CharStats(), "", new Inventory(), new Items());
-//        assertNotNull(test);
-//    }
+    @Test
+    public void testNonNullConstruct2() {
+        Boss test = new Boss("Lich", new CharStats());
+        assertNotNull(test);
+    }
+
+    @Test
+    public void testNonNullConstruct3() {
+        Boss test = new Boss("Lich", new CharStats(), "A skeletal figure, commanding legions of undead");
+        assertNotNull(test);
+    }
+
+    @Test
+    public void testNonNullConstruct4() {
+        Boss test = new Boss("Lich", new CharStats(), "", new Inventory());
+        assertNotNull(test);
+    }
+
+    @Test
+    public void testNonNullConstruct5() {
+        Boss test = new Boss("Lich", new CharStats(), "", new Inventory(), new Items());
+        assertNotNull(test);
+    }
 
 //    @Test
 //    public void testNameGetterSetter() {
