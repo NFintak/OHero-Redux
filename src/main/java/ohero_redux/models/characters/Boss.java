@@ -56,4 +56,28 @@ public class Boss extends Enemy {
         this.loot = loot;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
+    public Items getLoot() {
+        return loot;
+    }
+
+    public void setLoot(Items loot) {
+        this.loot = loot;
+    }
+
 }

@@ -49,13 +49,31 @@ public class BossTest {
         assertNotNull(test);
     }
 
-//    @Test
-//    public void testNameGetterSetter() {
-//        Boss test = new Boss();
-//        assertEquals("", test.getName());
-//        String expected = "Lich";
-//        test.setName(expected);
-//        assertEquals(expected, test.getName());
-//    }
+    @Test
+    public void testNameGetterSetter() {
+        Boss test = new Boss();
+        assertEquals("", test.getName());
+        String expected = "Lich";
+        test.setName(expected);
+        assertEquals(expected, test.getName());
+    }
+
+    @Test
+    public void testStatsGetterSetter() {
+        Boss test = new Boss("Lich");
+        assertNotNull(test.getStats());
+        CharStats expected = new CharStats();
+        test.setStats(expected);
+        assertEquals(expected, test.getStats());
+    }
+
+    @Test
+    public void testDescGetterSetter() {
+        Boss test = new Boss("Lich");
+        assertEquals("", test.getDescription());
+        String expected = "A skeletal figure, commanding legions of undead";
+        test.setDescription(expected);
+        assertEquals(expected, test.getDescription());
+    }
 
 }
