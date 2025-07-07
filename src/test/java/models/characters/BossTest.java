@@ -11,8 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BossTest {
 
-    Items loot = new Items();
-
     @Test
     public void testNullConstructor() {
         Boss test = new Boss();
