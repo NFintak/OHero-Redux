@@ -76,4 +76,36 @@ public class BossTest {
         assertEquals(expected, test.getDescription());
     }
 
+    @Test
+    public void testInvenGetterSetter() {
+        Boss test = new Boss("Lich");
+        assertNotNull(test.getInventory());
+        Inventory expected = new Inventory();
+        Items item = new Items();
+        expected.addItem(item);
+        test.setInventory(expected);
+        assertEquals(expected, test.getInventory());
+    }
+
+    @Test
+    public void testLootGetterSetter() {
+        Boss test = new Boss("Lich");
+        assertNotNull(test.getLoot());
+        Items expected = new Items();
+        test.setLoot(expected);
+        assertEquals(expected, test.getLoot());
+    }
+
+    @Test
+    public void testInstanceOfEnemy() {
+        Boss test = new Boss();
+        assertInstanceOf(Enemy.class, test);
+    }
+
+    @Test
+    public void testInstanceOfCharacter() {
+        Boss test = new Boss();
+        assertInstanceOf(Characters.class, test);
+    }
+
 }
