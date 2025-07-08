@@ -1,8 +1,9 @@
 package ohero_redux.models.characters;
 
+import ohero_redux.interfaces.HealthCheck;
 import ohero_redux.models.utilities.CharStats;
 
-public abstract class Characters {
+public abstract class Characters implements HealthCheck {
     private Long id;
     private String name;
     private CharStats stats;

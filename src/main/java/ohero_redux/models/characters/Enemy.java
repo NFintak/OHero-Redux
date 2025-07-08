@@ -3,7 +3,7 @@ package ohero_redux.models.characters;
 import ohero_redux.models.utilities.CharStats;
 import ohero_redux.interfaces.HealthCheck;
 
-public abstract class Enemy extends Characters implements HealthCheck{
+public abstract class Enemy extends Characters {
     //make abstract and split into 2-3 types of enemies?
     //brute, melee, boss?
 
