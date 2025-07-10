@@ -95,6 +95,14 @@ public class BossTest {
     }
 
     @Test
+    public void testHealthStatus() {
+        Boss test = new Boss();
+        assertEquals("0/0", test.getHealthStatus());
+        test.getStats().setTempHealth(20);
+        assertEquals("20/20", test.getHealthStatus());
+    }
+
+    @Test
     public void testInstanceOfEnemy() {
         Boss test = new Boss();
         assertInstanceOf(Enemy.class, test);

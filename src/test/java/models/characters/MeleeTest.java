@@ -81,6 +81,14 @@ public class MeleeTest {
     }
 
     @Test
+    public void testHealthCheck() {
+        Melee test = new Melee();
+        assertEquals("0/0", test.getHealthStatus());
+        test.getStats().setTempHealth(20);
+        assertEquals("20/20", test.getHealthStatus());
+    }
+
+    @Test
     public void testInstanceOfEnemy() {
         Melee test = new Melee();
         assertInstanceOf(Enemy.class, test);

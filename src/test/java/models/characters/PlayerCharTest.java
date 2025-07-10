@@ -97,4 +97,12 @@ public class PlayerCharTest {
         assertEquals(testInventory, testPlayer.getPlayerInventory());
     }
 
+    @Test
+    public void testHealthStatus() {
+        PlayerChar test = new PlayerChar();
+        assertEquals("0/0", test.getHealthStatus());
+        test.getStats().setTempHealth(20);
+        assertEquals("20/20", test.getHealthStatus());
+    }
+
 }
