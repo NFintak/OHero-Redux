@@ -22,7 +22,13 @@ public class NPCTest {
 
     @Test
     public void test2NPCConstructor() {
-        NonPlayerChar test = new NonPlayerChar("test", "Shopkeeper");
+        NonPlayerChar test = new NonPlayerChar("test", new CharStats());
+        assertNotNull(test);
+    }
+
+    @Test
+    public void test3NPCConstructor() {
+        NonPlayerChar test = new NonPlayerChar("test", new CharStats(), "Shopkeeper");
         assertNotNull(test);
     }
 
@@ -33,6 +39,15 @@ public class NPCTest {
         String expected = "Scott";
         test.setName(expected);
         assertEquals(expected, test.getName());
+    }
+
+    @Test
+    public void testStatsGetterSetter() {
+        NonPlayerChar test = new NonPlayerChar();
+        assertNotNull(test.getStats());
+        CharStats expected = new CharStats(5, 5, 5, 5, 5, 5);
+        test.setStats(expected);
+        assertEquals(expected, test.getStats());
     }
 
     @Test
@@ -50,6 +65,12 @@ public class NPCTest {
         assertEquals("0/0", test.getHealthStatus());
         test.getStats().setTempHealth(20);
         assertEquals("20/20", test.getHealthStatus());
+    }
+
+    @Test
+    public void testInstanceOfCharacters() {
+        NonPlayerChar test = new NonPlayerChar();
+        assertInstanceOf(Characters.class, test);
     }
 
 }
