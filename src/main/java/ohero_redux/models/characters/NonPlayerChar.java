@@ -17,9 +17,4 @@ public class NonPlayerChar extends Characters {
         this.type = type;
     }
 
-    public String getHealthStatus() {
-        return null;
-        //placeholder, might switch around where the interface is placed later
-    }
-
 }

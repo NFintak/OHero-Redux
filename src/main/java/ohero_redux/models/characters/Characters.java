@@ -65,4 +65,8 @@ public abstract class Characters implements HealthCheck {
         return this.getName() + "\n" + this.stats.statsSummary();
     }
 
+    public String getHealthStatus() {
+        return String.format("%s/%s", this.getStats().getTempHealth(), this.getStats().getTotalHealth());
+    }
+
 }

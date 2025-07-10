@@ -28,8 +28,4 @@ public abstract class Enemy extends Characters {
         return this.getClass().toString();
     }
 
-    public String getHealthStatus() {
-        return String.format("%s/%s", this.getStats().getTempHealth(), this.getStats().getTotalHealth());
-    }
-
 }

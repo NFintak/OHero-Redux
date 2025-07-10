@@ -35,8 +35,4 @@ public class PlayerChar extends Characters implements HealthCheck {
         return playerInventory;
     }
 
-    public String getHealthStatus() {
-        return String.format("%s/%s", this.getStats().getTempHealth(), this.getStats().getTotalHealth());
-    }
-
 }
