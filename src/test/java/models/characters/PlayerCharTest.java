@@ -6,6 +6,7 @@ import ohero_redux.models.utilities.Inventory;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import ohero_redux.models.items.Items;
+import ohero_redux.models.utilities.Dice;
 
 public class PlayerCharTest {
 
@@ -75,6 +76,16 @@ public class PlayerCharTest {
         assertEquals(10, testPlayer.getStats().getTempHealth());
         assertEquals(10, testPlayer.getStats().getTotalHealth());
         assertEquals(10, testPlayer.getStats().getCharisma());
+    }
+
+    @Test
+    public void testRandomStats() {
+        Dice d20 = new Dice();
+        CharStats testStats = new CharStats();
+        Integer dex = d20.getRoll();
+        testPlayer.getStats().setDexterity(dex);
+        assertEquals(dex, testPlayer.getStats().getDexterity());
+        assertTrue(dex > 0 && dex < 21);
     }
 
     @Test
